@@ -1,0 +1,35 @@
+<!-- write.html -->
+{% extends "main.html" %}
+
+{% block contents %}
+<script>
+    function checkForm() {
+        if($.trim($("#title").val()) == ""){
+            alert("제목을 입력하세요.");
+            $("#title").focus();
+            return false;
+        }
+        if($.trim($("#contents").val()) == ""){
+            alert("내용을 입력하세요.");
+            $("#contents").focus();
+            return false;
+        }
+    }
+</script>
+<form class="form-horizontal" role="form" name="form" method="POST" action="{{url_for('board.board_write')}}" onsubmit="return checkForm();">
+    <div class="form-group">
+        <label for="writer">작성자</label>
+        <input type="text" class="form-control" id="name" name="name" disabled value={{name}}>
+    </div>
+    <div class="form-group">
+        <label for="title">제목</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="제목을 입력하세요..">
+    </div>
+    <div class="form-group">
+        <label for="contents">내용</label>
+        <textarea class="form-control" rows="8" id="contents" name="contents" placeholder="내용을 입력하세요.."></textarea>
+    </div>
+    <div class="text-center"><input class="btn btn-primary" type="submit" value="작성하기"></div>
+</form>
+
+{% endblock %}

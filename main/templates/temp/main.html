@@ -1,0 +1,26 @@
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <script src="{{ url_for('static', filename='jquery.slim.min.js') }}"></script>    
+    <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script -->
+    <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <script>
+                alert("{{ messages[-1] }}");
+            </script>
+        {% endif %}
+    {% endwith %}
+</head>
+<body>
+    <div class="container">
+    {% include "menu.html" %}
+    {% block contents %}
+    {% endblock %}
+    </div>
+</body>
+</html>

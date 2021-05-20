@@ -1,0 +1,87 @@
+<html lang="kr">
+<title>프로젝트 수정</title>
+<head>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <script src="{{ url_for('static', filename='jquery.slim.min.js') }}"></script>    
+    <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script -->
+    <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+    <script>
+    function checkForm() {
+        if($.trim($.trim($("#project_name2").val()) == ""){
+            alert("고객사 프로젝트 이름을 입력해 주세요");
+            $("#project_name2").focus();
+            return false;
+        }
+        if($.trim($("#name").val()) == ""){
+            alert("마일스톤 이름을 입력해 주세요");
+            $("#name").focus();
+            return false;
+        }
+        if($.trim($("#startdate").val()) == ""){
+            alert("시작일을 입력해주세요");
+            $("#startdate").focus();
+            return false;
+        }
+        if($.trim($("#enddate").val()) == ""){
+            alert("종료일을 입력해주세요");
+            $("#enddate").focus();
+            return false;
+        }
+        if($.trim($("#author").val()) == ""){
+            alert("관리자를 입력해주세요");
+            $("#author").focus();
+            return false;
+        }
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+<br>
+<h3 style="color:gray;">수정/삭제 페이지 입니다.</h2>
+<div class="container">
+    <form class="form-horizontal" role="form" name="form" method="POST" action="{{url_for('project.project_edit', idx=result.id)}}" onsubmit="return checkForm();">
+        <br>
+        <div class="form-row">
+            <div class="col">
+                1. 고객사 프로젝트<input type="text" class="form-control" id="project_name1" name="project_name1" value="{{result.project_name1}}">
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <div class="col">
+                2. 고객사 프로젝트<input type="text" class="form-control" id="project_name2" name="project_name2" value="{{result.project_name2}}">
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <div class="col">
+                3. 마일스톤<input type="text" class="form-control" id="name" name="name" value="{{result.name}}">
+            </div>    
+        </div>
+        <br>
+        <div class="form-row">
+            <div class="col-2">
+                4. 시작일<input type="date" class="form-control" id="startdate" name="startdate" value="{{result.startdate}}">
+            </div>
+            <div class="col-2">
+                5. 종료일<input type="date" class="form-control" id="enddate"  name="enddate" value="{{result.enddate}}">
+            </div>
+            <div class="col-2">
+                6. 관리자<input type="text" class="form-control" id="author"  name="author" value="{{result.author}}">
+            </div>
+            <div class="col-2">
+                등록일시<input type="text" class="form-control" id="author"  name="author" value="{{result.pubdate | formatdatetime}}" readonly>
+            </div>
+        </div>
+        <div class="col"><br>
+            <button class="btn btn-warning btn-sm"  type="submit">수정</button>            
+            <a class="btn btn-danger btn-sm" href="{{url_for('project.project_delete', idx=result.id)}}">삭제</a>
+            <a class="btn btn-link btn-sm" href="{{url_for('project.project_write')}}">프로젝트 등록 페이지</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<html lang="kr">
+<title>프로젝트 등록</title>
+<head>
+    <style>
+        body{
+            background-image:url("{{ url_for('static', filename='image/jarvis.jpg') }}");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <script src="{{ url_for('static', filename='jquery.slim.min.js') }}"></script>    
+    <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script -->
+    <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+    <script>
+    function checkForm() {
+        if($.trim($("#project_name2").val()) == ""){
+            alert("고객사 프로젝트 이름을 입력해 주세요");
+            $("#project_name2").focus();
+            return false;
+        }
+        if($.trim($("#name").val()) == ""){
+            alert("마일스톤 이름을 입력해 주세요");
+            $("#name").focus();
+            return false;
+        }
+        if($.trim($("#enddate").val()) == ""){
+            alert("종료일을 입력해주세요");
+            $("#enddate").focus();
+            return false;
+        }
+        if($.trim($("#author").val()) == ""){
+            alert("관리자를 입력해주세요");
+            $("#author").focus();
+            return false;
+        }
+    }
+    </script>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <script>
+                alert("{{ messages[-1] }}");
+            </script>
+        {% endif %}
+    {% endwith %}
+</head>
+<body>
+<br><br>
+<h2 align="center" style="color:gray;"><font color="white">고객사 프로젝트, 마일스톤을 등록하는 페이지 입니다.</font></h2><br>
+<div class="container" style="background-color: white;border-radius: 1em">
+    <font color="black" size="3">※ 입력한 고객사 마일스톤은 <a class="btn btn-link btn-sm" href="{{url_for('project.project_schedule')}}">Project Schedule 페이지</a>에서 TCS 프로젝트 마일스톤들과 merge되어 출력됩니다.</font>
+    <form class="form-horizontal" role="form" name="form" method="POST" action="{{url_for('project.project_write')}}" onsubmit="return checkForm();">
+        <div class="form-row">
+            <div class="col">
+                1. TCS에 등록된 프로젝트와 연관 있는 고객사 프로젝트라면 TCS 프로젝트 이름을 입력해 주세요.<br>
+                입력한 TCS 프로젝트와 연관되어 출력됩니다. (TCS와 연관이 없다면 입력X)
+                <input type="text" class="form-control" id="project_name1" name="project_name1" placeholder="TCS 프로젝트 이름을 입력해 주세요">
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <div class="col">
+                2. 고객사 프로젝트<font color="red">-필수입력</font>
+                <input type="text" class="form-control" id="project_name2" name="project_name2" placeholder="고객사 프로젝트 이름을 입력해 주세요">
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <div class="col">
+                3. 마일스톤<font color="red">-필수입력</font>
+                <input type="text" class="form-control" id="name" name="name" placeholder="마일스톤 이름을 입력해 주세요">
+            </div>    
+        </div>
+        <br>
+        <div class="form-row">
+            <div class="col-2">
+                4. 시작일
+                <input type="date" class="form-control" id="startdate" name="startdate">
+            </div>
+            <div class="col-2">
+                5. 종료일<font color="red">-필수입력</font>
+                <input type="date" class="form-control" id="enddate"  name="enddate">
+            </div>
+            <div class="col-2">
+                6. 관리자, PL<font color="red">-필수입력</font>
+                <input type="text" class="form-control" id="author"  name="author">
+            </div>
+            <div class="col-2"><br>
+                <button class="btn btn-primary btn-sm"  type="submit">등록하기</button>
+            </div>
+        </div>
+    </form>
+    ※ 등록한 고객사 마일스톤을 수정/삭제 하려면 마일스톤 이름 선택하시면 됩니다.
+    <table class="table table-sm" style="text-align:center;">
+        <thead class="thead-dark">
+            <tr>
+                <th>TCS 프로젝트 이름</th>
+                <th>고객사 프로젝트 이름</th>
+                <th>마일스톤 이름</th>
+                <th>마일스톤 시작일</th>
+                <th>마일스톤 종료일</th>
+                <th>관리자(PL)</th>
+                <th>등록일</th>                
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+            <tr>
+                <td>{{i.project_name1}}</a></td>
+                <td>{{i.project_name2}}</a></td>
+                <td><a href="{{url_for('project.project_view', idx=i._id)}}">{{i.name}}</a></td>
+                <td>{{i.startdate}}</td>
+                <td>{{i.enddate}}</td>
+                <td>{{i.author}}</td>
+                <td>{{i.pubdate|formatdatetime}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    <table>
+</div>
+</body>
+</html>

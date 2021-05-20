@@ -1,0 +1,212 @@
+<html>
+<title>프로젝트 스케줄</title>
+<head>
+    <style>
+      h1{
+        font-size: 30px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+      table{
+        width:100%;
+        table-layout: fixed;
+      }
+      .tbl-header{
+        background-color: rgba(255,255,255,0.3);
+      }
+      .tbl-content{
+        height:750px;
+        overflow-x:auto;
+        margin-top: 0px;
+        border: 1px solid rgba(255,255,255,0.3);
+      }
+      th{
+        padding:3px;
+        font-weight: 600;
+        font-size: 16px;
+        color: #424242;
+        background-color: #F2F2F2;
+        text-transform: uppercase;
+        border-left: solid 1px #BDBDBD;
+      }
+      td{
+        text-align: right;
+        vertical-align:middle;
+        font-weight: 400;
+        font-size: 12px;
+        color: #fff;
+        border-bottom: solid 1px rgba(255,255,255,0.1);
+        border-left: solid 1px rgba(255,255,255,0.1);
+        word-break: break-all;
+      }
+      .td1{
+        text-align: center;
+        vertical-align:middle;
+        font-weight: 400;
+        font-size: 12px;
+        color: #fff;
+        border-bottom: solid 1px rgba(255,255,255,0.1);
+        border-left: solid 1px rgba(255,255,255,0.1);
+        word-break: break-all;
+      }
+
+      /* demo styles */
+      body{
+        background: linear-gradient(to right, #585858, #585858);
+        font-family: 'Roboto', sans-serif;
+      }
+      section{
+        margin: 5px;
+      }
+      /* for custom scrollbar for webkit browser*/
+      ::-webkit-scrollbar {
+          /* width: 6px; */
+          display: none;
+      } 
+      ::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+      } 
+      ::-webkit-scrollbar-thumb {
+          -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+      }
+      tr:hover {background-color:#2E2E2E;}
+      
+    </style>
+        <meta charset="UTF-8">
+
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+        <script src="{{ url_for('static', filename='jquery.slim.min.js') }}"></script>    
+        <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+        <link type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript">
+        $(function() {
+            $(document).tooltip();
+        });
+        </script>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <script>
+                    alert("{{ messages[-1] }}");
+                </script>
+            {% endif %}
+        {% endwith %}
+    	<script type="text/javascript">
+    		$(document).ready(function(e){
+    			genRowspan("first");
+    		});
+    		
+    		function genRowspan(className){
+    			$("." + className).each(function() {
+    				var rows = $("." + className + ":contains('" + $(this).text() + "')");
+    				if (rows.length > 1) {
+    					rows.eq(0).attr("rowspan", rows.length);
+    					rows.not(":eq(0)").remove();
+    				}
+    			});
+    		}
+    	</script>
+    	<script type="text/javascript">
+        	$(function() {
+            $(document).tooltip({
+               content: function() {
+                return $(this).prop('title');
+                   }
+                });
+            });
+    	</script>
+    	<script>
+        	(function(document) {
+            	'use strict';
+            
+            	var LightTableFilter = (function(Arr) {
+            
+            		var _input;
+            
+            		function _onInputEvent(e) {
+            			_input = e.target;
+            			var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
+            			Arr.forEach.call(tables, function(table) {
+            				Arr.forEach.call(table.tBodies, function(tbody) {
+            					Arr.forEach.call(tbody.rows, _filter);
+            				});
+            			});
+            		}
+            
+            		function _filter(row) {
+            			var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+            			row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+            		}
+            
+            		return {
+            			init: function() {
+            				var inputs = document.getElementsByClassName('light-table-filter');
+            				Arr.forEach.call(inputs, function(input) {
+            					input.oninput = _onInputEvent;
+            				});
+            			}
+            		};
+            	})(Array.prototype);
+            
+            	document.addEventListener('readystatechange', function() {
+            		if (document.readyState === 'complete') {
+            			LightTableFilter.init();
+            		}
+            	});
+            
+            })(document);
+    	</script>
+</head>
+<body>
+<h1>Project Schedule</h1>
+&nbsp;<input type="search" class="light-table-filter" data-table="order-table" placeholder="Search">
+<a class="btn btn-link btn-sm float-right" href="{{url_for('project.project_write')}}"><font color="white">고객사 프로젝트, 마일스톤 등록 페이지</font></a>
+<section>
+    <div class="tbl-header border-radius">
+        <table cellpadding="0" cellspacing="0" border="0">
+            <thead  align="center">
+                <tr>
+                    <th width="200">Project</th>
+                    <th width="150">Type</th>
+                    {% for i in th %}
+                        {{i|safe}}
+                    {% endfor %}
+                <tr>
+            </thead>
+        </table>
+    </div>
+    <div class="tbl-content">
+        <table cellpadding="0" cellspacing="0" border="0" class="order-table table">
+            <tbody>
+                {% for item in td %}
+                <tr>
+                    {% if td[loop.index0][1] == "TCS" %}
+                        {{td[loop.index0][0]|safe}}
+                    {% else %}
+                        <td class="first td1" width="200" style="word-break:break-all"><font size="2">{{td[loop.index0][0]|safe}}</font></td>
+                    {% endif %}
+                    <td class="td1" width="150">{{td[loop.index0][1]}}</td>
+                    <td>{{td[loop.index0][2]|safe}}</td>
+                    <td>{{td[loop.index0][3]|safe}}</td>
+                    <td>{{td[loop.index0][4]|safe}}</td>
+                    <td style="background-color:#2E2E2E">{{td[loop.index0][5]|safe}}</td>
+                    <td>{{td[loop.index0][6]|safe}}</td>
+                    <td>{{td[loop.index0][7]|safe}}</td>
+                    <td>{{td[loop.index0][8]|safe}}</td>
+                    <td>{{td[loop.index0][9]|safe}}</td>
+                    <td>{{td[loop.index0][10]|safe}}</td>
+                    <td>{{td[loop.index0][11]|safe}}</td>
+                    <td>{{td[loop.index0][12]|safe}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+</body>
+</html>

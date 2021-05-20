@@ -1,0 +1,26 @@
+<body>
+    <form class="form-horizontal" role="form" name="form" method="POST" action="{{url_for('board.board_write')}}" onsubmit="return checkForm();">
+    <div class="row">
+        <div class="col">
+            <select name= "project_key">
+                    <option value="SD701XR">프로젝트를 선택하세요</option>
+                    <option value="SD803XQ">[SDK]TCC701x_RTOS_MCU</option>
+                    <option value="SD805XA2">[SDK]TCC803x_QNX_Cluster</option>
+                    <option value="SD805XA3">[SDK]TCC805x_Android10_IVI</option>
+                    <option value="SD805XL2">[SDK]TCC805x_Android11_IVI</option>
+                    <option value="SD805XL">[SDK]TCC805x_Linux_Cluster</option>
+                    <option value="SD805XL1">[SDK]TCC805x_Linux_DVRS</option>
+            </select>
+        </div>
+        <div class="col">
+            <input type="text" name="version_name" placeholder="버전 이름을 입력하세요">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">                
+            <input type="date" name="released">
+            <input type="date" name="enddate">            
+        </div>
+    </div>
+    </form>
+</body>
