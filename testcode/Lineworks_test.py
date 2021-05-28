@@ -9,7 +9,7 @@ url = 'https://apis.worksmobile.com/r/kr1llsnPeSqSR/message/v1/bot/1809717/messa
 headers = {
     'Content-Type' : 'application/json; charset=UTF-8',
     'consumerKey' : 'IuAF6mCrW4FiTxWF6bmm',
-    'Authorization': 'Bearer AAABAXONcN0Ch9T4YmhyDiRG+1ilvRZoM1MoutdUZLzV6++m3h+/fipKAlD0I1OKCbAJFWhuiQV07ldyuY1M3qu0pVEKqWcrhPdK5k2PKp2Xo42bfFsPleMt8D0+ZHqJVGrXPdw3JheNM5hkVqpzEc0l24vlpymIeLTg74+aEUFa+SpI6mjkbP5vJwD5kR8auewDnQgmuE1cwdBVlveJq2ZDC7ohbAF29Hfd/Wmc75h72LAC3W1Zea+4LF/UpKoBnSxCmqSInyWmyYwAJ5HBrPp/9PdoxB5SqRma2aFswhmwvaR/6AClqjmuAKdGlcgA+DertSmLCCer7i2iNXxNimgqXsrvEAHQQpLwtrv8IGdcV/sf'
+    'Authorization': 'Bearer AAABAUUie1bSBVNZ8qOFUPnYdnU40TMODCTG29XBUc+bImr+hV/SVj0cf4u+7RcnMbYD6NWmR5PiAWvzWakGYq2j2jEF1lh0LTLqbuTVB8pG4O0JzF7XZHMfvX6oL/K+PD6odK+6/0bGjgyy5lmOq7m2hbkPPjGR/BLvTkI//YOau5iwX0CQFFWo6UwBOns51mRdaswGPd1sMm/LqpGvzwzuACX0a3kzN9J7HM5NOM4BmCXRIXyFf+zXELPkEoSTm+qxM1C2qhgLuZvwMKbmjR9XyV0V0gjqfvqhB1/gkVb/5nJLjhqGCPAAF+d0zTQYw0u4+0KTGb9kfm9zu4sfIn+MPBidmuHXjUmzNhvnwCOxbO1t'
 }
 
 
@@ -18,7 +18,7 @@ payload = {
         "accountId": "bluenote212@telechips.com",
         "content": {
                 "type": "button_template",
-                "contentText": "[TCS 사용정책 공지]\nTCS 사용 방법 중 jql, issue filter 사용 가이드 안내드립니다. ",
+                "contentText": "219.240.43.93 send message",
                 "actions": [{
                   "type": "uri",
                   "label": "TCS 사용가이드",
