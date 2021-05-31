@@ -6,32 +6,6 @@ from main import datetime
 import re
 
 blueprint = Blueprint("rest", __name__, url_prefix="/rest")
-
-'''
-@blueprint.route('/tims', methods=['GET', 'POST'])
-def tims():
-    data = request.get_json()
-    parameter_dict = request.args.to_dict()
-    day = datetime.now()
-
-    conn = pymongo.MongoClient("219.240.43.93", 27017)
-    db = conn.tcs
-    col = db.rest_tims
-    
-    if data != None:    
-        col.insert_one({
-                    'key_tims' : data['issue']['key'], 
-                    'data': data,
-                    'prrameter': parameter_dict,
-                    'date': day
-                })
-    else:
-        return 'Hello rest tims'
-    
-    return ''
-    conn.close()
-
-'''
 @blueprint.route('/tims', methods=['GET', 'POST'])
 def tims_issuecreate():
     conn = pymongo.MongoClient("219.240.43.93", 27017)
@@ -102,11 +76,11 @@ def tims_issuecreate():
                     col = db.user_data
                     ass = list(col.find({"employee_No":{'$regex':tims_data['issue']['fields']['assignee']['name'],'$options':'i'}},{'_id':0,'employee_No':-1}))
                     if len(ass) == 0:
-                        tims_data['issue']['fields']['assignee'] = {'name':'b180093'}
+                        tims_data['issue']['fields']['assignee'] = {'name':tims_data['user']['name']}
                     else:
                         tims_data['issue']['fields']['assignee'] = {'name':ass[0]['employee_No']}
                 else:
-                    tims_data['issue']['fields']['assignee'] = {'name':'b180093'}
+                    tims_data['issue']['fields']['assignee'] = {'name':tims_data['user']['name']}
                 
                 
                 #Tims issue duedate가 없을때 오늘날짜로 처리하는 코드
@@ -164,6 +138,7 @@ def tims_issuecreate():
                 conn.close()
                 return ''
             else:
+                #이미 TCS 이슈로 생성이 되어 있을때 Enent 요청자에게 bot 메시지 보내는 코드
                 col = db.rest_tims
                 tcs_key = col.find({"key_tims":tims_data['issue']['key']})
                 
@@ -190,6 +165,8 @@ def tims_issuecreate():
                 requests.post(url, data=json.dumps(body), headers=headers)
             
                 return ''
+            
+        #Tims 이슈가 assignee이 변경되었을때 Sync 맞추는 코드
         elif tims_data != None and 'changelog' in tims_data.keys():
             for i in range(0, len(tims_data['changelog']['items'])):
                 if tims_data['changelog']['items'][i]['field'] == 'assignee' and tims_data['changelog']['items'][i]['to'] != None:
@@ -197,9 +174,10 @@ def tims_issuecreate():
                     ass = list(col.find({"employee_No":{'$regex':tims_data['changelog']['items'][i]['to'],'$options':'i'}},{'_id':0,'employee_No':-1}))
                     if len(ass) != 0:
                         data = {'fields':{'assignee':{'name':ass[0]['employee_No']}}}
-                        requests.put('https://tcs.telechips.com:8443/rest/api/2/issue/' + tims_data['issue']['fields']['customfield_12600'].split('/')[-1], data=json.dumps(data), headers=headers, auth=(id_pw['os_username'], id_pw['os_password']))
                     else:
-                        False
+                        data = {'fields':{'assignee':{'name':tims_data['user']['name']}}}
+                    
+                    requests.put('https://tcs.telechips.com:8443/rest/api/2/issue/' + tims_data['issue']['fields']['customfield_12600'].split('/')[-1], data=json.dumps(data), headers=headers, auth=(id_pw['os_username'], id_pw['os_password']))
                 else:
                     continue
             return ''
@@ -233,25 +211,70 @@ def tims_issuecreate():
         conn.close()
         return 'fail'
     
-    
 
 @blueprint.route('/tcs', methods=['GET', 'POST'])
 def tcs():
-    data = request.get_json()
-    parameter_dict = request.args.to_dict()
-    day = datetime.now()
-
     conn = pymongo.MongoClient("219.240.43.93", 27017)
     db = conn.tcs
-    col = db.rest_tcs
-
-    col.insert_one({
-                'data': data,
-                'prrameter': parameter_dict,
-                'date': day
-            })
+    try:
+        tcs_data = request.get_json()
+        #request header 정의
+        headers = {'Content-Type': 'application/json'}
+        
+        col = db.id_pw
+        pw_data = col.find({})
+        id_pw = {'os_username': pw_data[1]['id'], 'os_password': pw_data[1]['pw']}
+        
+        #TIMS에서 복사해서 TCS에 생성된 이슈가 삭제 되었을때 처리코드 (DB 삭제, TCS URL 필드 삭)
+        if tcs_data != None and tcs_data['webhookEvent'] == 'jira:issue_deleted':
+            col = db.rest_tims
+            col.delete_many({'key_tcs':tcs_data['issue']['key']})
+            
+            data2 = {'fields':{'customfield_12600' : ''}}
+            
+            #Tims 이슈 Field에 url delete
+            r = ''
+            r = requests.put('https://tims.telechips.com:8443/rest/api/2/issue/' + tcs_data['issue']['fields']['customfield_11903'].split('/')[-1], data=json.dumps(data2), headers=headers, auth=(id_pw['os_username'], id_pw['os_password']))
+            
+        else:
+            return ''
+        
+        return ''
+        
+    except:
+        #위에서 에러 발생시 나한테 noti
+        col = db.bot_oauth
+        key = col.find({})[0]['consumerKey']
+        auth = col.find({})[0]['Authorization']
+        headers = {
+                'Content-Type': 'application/json; charset=UTF-8',
+                'consumerKey': key,
+                'Authorization': auth
+                }
+        
+        url = 'https://apis.worksmobile.com/r/kr1llsnPeSqSR/message/v1/bot/1809717/message/push'
+        if r != '':    
+            body = {
+                    'accountId': 'bluenote212@telechips.com',
+                    'content':{
+                            'type': 'text',
+                            'text': 'TCS 이슈 삭제 실패\n' + r.text
+                        }
+                }
+        else:
+            body = {
+                    'accountId': 'bluenote212@telechips.com',
+                    'content':{
+                            'type': 'text',
+                            'text': 'TCS 이슈 삭제 실패\n'
+                        }
+                }
+        requests.post(url, data=json.dumps(body), headers=headers)
+        return ''
     
     conn.close()
     
-    return 'Hello rest tcs'
+    
+    
+    
 
