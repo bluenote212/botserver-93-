@@ -27,6 +27,7 @@ payload = {
                 }
         }
 r = requests.post(url, data=json.dumps(payload), headers=headers)
-print(r, r.text)
+print(r.status_code, r.text)
+
 
 

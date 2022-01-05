@@ -1,0 +1,315 @@
+<html>
+<head>
+<title>Git Commit Message Create</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <style>
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script language="JavaScript" type="text/javascript">
+        function checkForm() {
+    		if($.trim($("#commit_type").val()) == ""){
+    			alert("Commit Type을 선택해 주세요");
+    			$("#commit_type").focus();
+    			return false;
+        		}
+
+    		if($.trim($("#commit_message").val()) == ""){
+                alert("Commit Message를 입력해 주세요");
+                $("#commit_message").focus();
+                return false;
+                }
+        
+            if($.trim($("#symptom").val()) == ""){
+                alert("Symptom을 입력해 주세요");
+                $("#symptom").focus();
+                return false;
+                }
+            
+            if($.trim($("#cause").val()) == ""){
+                alert("Cause를 입력해 주세요");
+                $("#cause").focus();
+                return false;
+                }
+            
+            if($.trim($("#solution").val()) == ""){
+                alert("Resolution을 입력해 주세요");
+                $("#solution").focus();
+                return false;
+                }
+                
+            if($.trim($("#project_key").val()) == ""){
+                alert("QA프로젝트를 선택해 주세요");
+                $("#project_key").focus();
+                return false;
+                }
+            
+            if($.trim($("#reporter").val()) == ""){
+                alert("Reporter를 선택해 주세요");
+                $("#reporter").focus();
+                return false;
+                }
+            
+            if($.trim($("#assignee").val()) == ""){
+                alert("Assignee을 선택해 주세요");
+                $("#assignee").focus();
+                return false;
+                }
+                
+            if($.trim($("#patch_type").val()) == ""){
+                alert("Patch type을 선택해 주세요");
+                $("#patch_type").focus();
+                return false;
+                }
+                
+            if($.trim($("#patch_type").val()) == "tims" && $.trim($("#tims_issue").val()) == ""){
+                alert("Tims Issue Key를 입력해 주세요");
+                $("#tims_issue").focus();
+                return false;
+                }
+            
+            if($.trim($("#patch_type").val()) == "qa" && $.trim($("#qa_issue").val()) == ""){
+                alert("QA Issue Key를 입력해 주세요");
+                $("#qa_issue").focus();
+                return false;
+                }
+            
+            if($.trim($("#sdk_version").val()) == ""){
+                alert("SDK Version을 입력해 주세요");
+                $("#sdk_version").focus();
+                return false;
+                }
+            
+            if($.trim($("#patch_version").val()) == ""){
+                alert("Patch Version을 입력해 주세요");
+                $("#patch_version").focus();
+                return false;
+                }
+            
+            if($.trim($("#evb").val()) == ""){
+                alert("Test EVB를 선택해 주세요");
+                $("#evb").focus();
+                return false;
+                }
+            
+            if($.trim($("#sub_device").val()) == ""){
+                alert("Sub Device를 입력해 주세요");
+                $("#sub_device").focus();
+                return false;
+                }
+            
+            if($.trim($("#test_result").val()) == ""){
+                alert("Test Result를 입력해 주세요");
+                $("#test_result").focus();
+                return false;
+                }
+            
+            var check1 = document.getElementById('fanout_confirm');
+            if(!($(check1).prop("checked"))){
+                alert("Fan-out 확인 여부를 체크해 주세요");
+                $("#fanout_confirm").focus();
+                return false;
+            }
+            
+            if($.trim($("#pre_patch").val()) == ""){
+                alert("Pre applied patch를 입력해 주세요");
+                $("#pre_patch").focus();
+                return false;
+                }
+            
+            if($.trim($("#how_patch").val()) == ""){
+                alert("How to Apply Patch를 입력해 주세요");
+                $("#how_patch").focus();
+                return false;
+                }
+        }
+        
+    	$(document).ready(function(){
+            $('#tims').hide();
+            $('#qa').hide();
+
+            $("#patch_type").change(function(){
+                $('#tims').hide('fast');
+                $('#qa').hide('fast');
+                $("#tims_issue").val("");
+                $("#qa_issue").val("");
+                $("#" + this.value).show('fast');
+            });
+        });
+        
+        function fn_press_han(obj){
+            if(event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 37 || event.keyCode == 39 || event.keyCode == 46) return;
+            obj.value = obj.value.replace(/[ㄱ-ㅎㅏ-ㅣ가-힣]/g,'');
+        }
+        
+        function fn_press_num(obj){
+            obj.value = obj.value.replace(/[^0-9]/g,'');
+        }
+        
+        function fn_press_num_dot(obj){
+            obj.value = obj.value.replace(/[^0-9\.]/g,'');
+        }
+
+    </script>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <script>
+                alert("{{ messages[-1] }}");
+            </script>
+        {% endif %}
+    {% endwith %}
+</head>
+<body>
+<h3 align="center">실시간 Patch를 위한 Git Commit Message 작성페이지 입니다.</h3>
+<form method="POST" action="{{url_for('tcs.result')}}" onsubmit="return checkForm();" >
+<div class="container" style="border: 2px solid black;width:1600px;height:auto;padding:10px 10px 10px 10px">
+<h4 align="center">Commit Info</h4>
+    <div class="row" style="margin-bottom:5px;">
+	    <div class="col-sm-3" style="text-align:right;">Commit Title <font color="red">*</font></font></div>
+	<div class="col-sm-2">
+		<select id="commit_type" name="commit_type" class="form-control" style="width:250px;">
+			<option value="">Type을 선택해주세요</option>
+			<option value="bug">bug</option>
+			<option value="ref">ref</option>
+			<option value="fea">fea</option>
+			<option value="upg">upg</option>
+		</select>
+	</div>
+	<div class="col-sm-7"><input type="text" class="form-control" style="width:830px;" id="commit_message" name="commit_message" maxlength="300" onkeyup="fn_press_han(this);" placeholder="Title을 입력해주세요. (영문)" size="150"></div>
+    </div>
+
+    <div style="margin-bottom:10px">
+        <div class="row" style="margin-bottom:10px">
+            <div class="col-sm-3" style="text-align:right">Symptoms <font color="red">*</font></div>
+            <div class="col-sm-9"><textarea id="symptom" name="symptom" class="form-control" style="width:auto;" rows="2" cols="151" onkeyup="fn_press_han(this);" placeholder="이슈 현상과 재현 방법을 반드시 입력해 주세요. (영문)"></textarea></div>
+        </div>
+    </div>
+    
+    <div class="row" style="margin-bottom:10px">
+            <div class="col-sm-3" style="text-align:right">Cause <font color="red">*</font></div>
+            <div class="col-sm-9"><textarea id="cause" name="cause" class="form-control" style="width:auto;" rows="2" cols="151" onkeyup="fn_press_han(this);" placeholder="이슈 발생 원인에 대해서 설명해 주세요. (영문)"></textarea></div>
+        </div>
+    
+    <div class="row" style="margin-bottom:5px">
+        <div class="col-sm-3" style="text-align:right">Resolution <font color="red">*</font></div>
+        <div class="col-sm-9"><textarea class="form-control" style="width:auto;" id="solution" name="solution" rows="2" cols="151" onkeyup="fn_press_han(this);" placeholder="이슈를 어떻게 수정했는지 설명해 주세요. (영문)" size="150"></textarea></div>
+    </div>
+    
+<h4 align="center">TCS Info</h4>
+    
+    <div class="row" id="issue_create" style="margin-bottom:5px">
+        <div class="col-sm-3" style="text-align:right">TCS Project Info <font color="red">*</font></div>
+        <div class="col-sm-9">
+            <select id="project_key" name="project_key" class="selectpicker" data-live-search="true" style="width:auto">
+                <option value="">Patch 이슈 등록 프로젝트</option>
+                {% for i in project %}
+                    <option value="{{i.key}}">{{i.name}}</option>
+                {% endfor %}
+            </select>
+            <select id="reporter" name="reporter" class="selectpicker" data-live-search="true" style="width:auto">
+            		<option value="">Reporter(본인이름) 선택</option>
+        		{% for i in user %}
+                    <option value="{{i.employee_No}}">{{i.name}}</option>
+                {% endfor %}
+            </select>
+            <select id="assignee" name="assignee" class="selectpicker" data-live-search="true" style="width:auto">
+            		<option value="">Assignee(담당자) 선택</option>
+        		{% for i in user %}
+                    <option value="{{i.employee_No}}">{{i.name}}</option>
+                {% endfor %}
+    	    </select>
+    	</div>
+    </div>
+
+    <div class="row" style="margin-bottom:5px">
+        <div class="col-sm-3" style="text-align:right">Patch Type <font color="red">*</font></div>
+        <div class="col-sm-9">
+            <select id="patch_type" name="patch_type" class="form-control" style="width:auto;">
+                <option value="" selected="selected">Patch Type을 선택해 주세요.</option>
+                <option value="tims">TIMS (고객사 이슈)</option>
+                <option value="qa">TCS (QA 검증이슈)</option>
+                <option value="rnd">RND (신규 기능 추가/개선)</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row" id="tims" style="margin-bottom:5px">
+        <div class="col-sm-3" style="text-align:right">IM Issue Key <font color="red">*</font></div>
+        <div class="col-sm-9"><input type="text" class="form-control" style="width:auto;" id="tims_issue" name="tims_issue" maxlength="30" onkeyup="fn_press_han(this);" placeholder="TIMS IM Issue Key를 입력해주세요 (ex: IM001A-10125)" size="150"></div>
+    </div>
+
+    <div class="row" id="qa" style="margin-bottom:5px">
+        <div class="col-sm-3" style="text-align:right">QA Issue <font color="red">*</font></div>
+        <div class="col-sm-9"><input type="text" class="form-control" style="width:auto;" id="qa_issue" name="qa_issue" maxlength="30" onkeyup="fn_press_han(this);" placeholder="TCS QA Issue Key를 입력해주세요 (ex: QSD803XQ-12)" size="150"></div>
+    </div>
+
+    <div class="row" style="margin-bottom:5px">
+        <div class="col-sm-3" style="text-align:right">SDK Version <font color="red">*</font></div>
+        <div class="col-sm-9"><input type="text" class="form-control" style="width:300px;" id="sdk_version" name="sdk_version" maxlength="8" onkeyup="fn_press_num_dot(this);" placeholder="SDK의 버전을 입력해 주세요 ex: 1.0.0" size="10"></div>
+    </div>
+
+    <div class="row" style="margin-bottom:5px">
+        <div class="col-sm-3" style="text-align:right">Patch Version <font color="red">*</font></div>
+        <div class="col-sm-9"><input type="text" class="form-control" style="width:500px;" id="patch_version" name="patch_version" maxlength="4" onkeyup="fn_press_num(this);" placeholder="QA의뢰 Wiki 페이지에서 넘버링한 Patch 번호를 입력해 주세요 (4자리 숫자)" size="150"></div>
+    </div>
+    
+    <div class="row" style="margin-bottom:5px">
+        <div class="col-sm-3" style="text-align:right">Test EVB <font color="red">*</font></div>
+        <div class="col-sm-9">
+            <select id="evb" name="evb" class="form-control" style="width:auto;">
+                <option value="" selected="selected">Board 종류를 선택해 주세요</option>
+                <option value="Telechips EVB">Telechips EVB</option>
+                <option value="Customer EVB">Customer EVB</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="row" style="margin-bottom:5px">
+	    <div class="col-sm-3" style="text-align:right">Sub Device/s <font color="red">*</font></div>
+        <div class="col-sm-9">
+            <select id="sub_device" name="sub_device" class="form-control" style="width:auto;">
+        		<option value="" selected="selected">선택해 주세요</option>
+          		{% for i in chip %}
+          		<option value="{{i.sub_chip}}">{{i.sub_chip}}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    
+    <div class="row" style="margin-bottom:5px">
+        <div class="col-sm-3" style="text-align:right">Test Result <font color="red">*</font></div>
+        <div class="col-sm-9"><textarea class="form-control" style="width:auto;" id="test_result" name="test_result" rows="2" cols="151" placeholder="QA 입고전 테스트 결과를 입력해주세요" size="150"></textarea></div>
+    </div>
+    
+    <div class="row" style="margin-bottom:5px">
+        <div class="col-sm-3" style="text-align:right">Fan-out 확인 여부 <font color="red">*</font></div>
+        <div class="col-sm-9">생성하는 Patch의 Fan-out 여부에 대해 검토 완료되었습니까?<br><input id="fanout_confirm" type="checkbox"> Yes</div>
+    </div>
+
+<h4 align="center">Release Note Info</h4>
+    
+    <div class="row" style="margin-bottom:5px">
+        <div class="col-sm-3" style="text-align:right">Pre applied patch <font color="red">*</font></div>
+        <div class="col-sm-9"><textarea class="form-control" style="width:auto;" id="pre_patch" name="pre_patch" rows="2" cols="151" onkeyup="fn_press_han(this);" placeholder="사전에 적용 되어 있어야 할 Patch가 있으면 Patch version을 입력하고 없으면 None을 입력해 주세요. (영문)" size="150"></textarea></div>
+    </div>
+
+    <div class="row" style="margin-bottom:5px">
+        <div class="col-sm-3" style="text-align:right">How to Apply Patch <font color="red">*</font></div>
+        <div class="col-sm-9"><textarea class="form-control" style="width:auto;" id="how_patch" name="how_patch" rows="2" cols="151" onkeyup="fn_press_han(this);" placeholder="Patch를 어떻게 적용해야 하는지 고객이 알수 있도록 설명해 주세요. (영문)" size="150"></textarea></div>
+    </div>
+
+
+</div><br>
+<div align="center"><button type="submit" class="btn btn-danger btn-lg">생성</button></div>
+</form>
+
+</body>
+</html>

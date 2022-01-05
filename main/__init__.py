@@ -14,9 +14,10 @@ import math
 import json, requests
 
 app = Flask(__name__, template_folder="templates")
-app.config["MONGO_URI"] = "mongodb://localhost:27017/tcs" 
+app.config["MONGO_URI"] = "mongodb://localhost:27017/tcs"
 app.config['SECRET_KEY'] = 'password12345!'
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=30)
+
 
 mongo = PyMongo(app)
 
@@ -28,11 +29,13 @@ mongo = PyMongo(app)
 #from . import project
 from . import rest
 from . import bot
-from . import rit
+from . import tcs
+from . import test
 
 #app.register_blueprint(board.blueprint)
 #app.register_blueprint(member.blueprint)
 #app.register_blueprint(project.blueprint)
 app.register_blueprint(rest.blueprint)
 app.register_blueprint(bot.blueprint)
-app.register_blueprint(rit.blueprint)
+app.register_blueprint(tcs.blueprint)
+app.register_blueprint(test.blueprint)

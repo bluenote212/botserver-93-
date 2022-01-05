@@ -1,0 +1,117 @@
+<html>
+    <head>
+    <style>
+        textarea{
+            font-family: inherit;
+            font-size: inherit;
+        }
+    </style>
+    </head>
+    <body>
+    [{{ data['commit_type'] }}] {{ data['commit_message'] }}<br><br>
+	<pre style="font-family:inherit">Symptom : {{ data['symptom'] }}<br><br>Cause : {{ data['cause'] }}<br><br>Resolution : {{ data['solution'] }}</pre><br>
+	{% if data1['error_result'] != '' %}
+    	TCS Issue : {{ data1['error_result'] }}<font color="red">(이슈 생성 실패 신호찬M에게 문의)</font><br>
+	{% elif data1['key_result'] != '' %}
+    	TCS Issue : <a href="https://tcs.telechips.com:8443/browse/{{ data1['key_result'] }}" target="_blank">{{ data1['key_result'] }}</a><br>
+    {% endif %}
+	<font color="red">↑↑↑↑</font>
+	위까지 복사 해서 Commit Message로 사용하면 됩니다.<br>아래는 pdf, docx Release Note를 다운받는 버튼 2개가 있습니다. (CSS에 업로드는 PDF로 해야 합니다.)<br><br>
+	<div  style="display: flex; height: 100px;">
+        <div style="width:50%;">
+            <form method="POST" action="{{url_for('tcs.download_pdf')}}">
+            	<button type="submit">Release Note Download (pdf)</button>
+            	<table border="1" cellspacing="0" cellpadding="0" width="80%">
+                	<tr>
+            			<td>SDK Name</td>
+            			<td><input type="text" id="sdk_name" name="sdk_name" value="{{ data1['project_name'] }}" readonly></td>
+            		</tr>
+            		<tr>
+            			<td>SDK Version</td>
+            			<td><input type="text" id="sdk_version" name="sdk_version" value="{{ data['sdk_version'] }}" readonly></td>
+            		</tr>
+            		<tr>
+            			<td>Board</td>
+            			<td><input type="text" id="evb" name="evb" value="{{ data['evb'] }}" style="width:auto" readonly></td>
+            		</tr>
+            		<tr>
+            			<td>Patch Name</td>
+            			<td><input type="text" id="patch_name" name="patch_name" value="{{ data['commit_message'] }}" readonly></td>
+            		</tr>
+            		<tr>
+            			<td>Patch Version</td>
+            			<td><input type="text" id="patch_version" name="patch_version" value="{{ data['patch_version'] }}" readonly></td>
+            		</tr>
+            		<tr>
+            			<td>Symptoms</td>
+            			<td><textarea id="symptom" name="symptom" rows="3" cols="70" readonly>{{ data['symptom'] }}</textarea></td>
+            		</tr>
+            		<tr>
+            			<td>Cause</td>
+            			<td><textarea id="cause" name="cause" rows="3" cols="70" readonly>{{ data['cause'] }}</textarea></td>
+            		</tr>
+            		<tr>
+            			<td>Resolution</td>
+            			<td><textarea id="solution" name="solution" rows="3" cols="70" readonly>{{ data['solution'] }}</textarea></td>
+            		</tr>
+            		<tr>
+            			<td>Pre applied patch</td>
+            			<td><textarea id="pre_patch" name="pre_patch" rows="3" cols="70" readonly>{{ data['pre_patch'] }}</textarea></td>
+            		</tr>
+            		<tr>
+            			<td>How to Apply Patch</td>
+            			<td><textarea id="how_patch" name="how_patch" rows="3" cols="70" readonly>{{ data['how_patch'] }}</textarea></td>
+            		</tr>
+            	</table>
+        	</form>
+        </div>
+        <div style="flex-grow: 1;">
+            <form method="POST" action="{{url_for('tcs.download')}}">
+            	<button type="submit">Release Note Download (docx)</button>
+            	<table border="1" cellspacing="0" cellpadding="0" width="80%">
+                	<tr>
+            			<td>SDK Name</td>
+            			<td><input type="text" id="sdk_name" name="sdk_name" value="{{ data1['project_name'] }}" readonly></td>
+            		</tr>
+            		<tr>
+            			<td>SDK Version</td>
+            			<td><input type="text" id="sdk_version" name="sdk_version" value="{{ data['sdk_version'] }}" readonly></td>
+            		</tr>
+            		<tr>
+            			<td>Board</td>
+            			<td><input type="text" id="evb" name="evb" value="{{ data['evb'] }}" style="width:auto" readonly></td>
+            		</tr>
+            		<tr>
+            			<td>Patch Name</td>
+            			<td><input type="text" id="patch_name" name="patch_name" value="{{ data['commit_message'] }}" readonly></td>
+            		</tr>
+            		<tr>
+            			<td>Patch Version</td>
+            			<td><input type="text" id="patch_version" name="patch_version" value="{{ data['patch_version'] }}" readonly></td>
+            		</tr>
+            		<tr>
+            			<td>Symptoms</td>
+            			<td><textarea id="symptom" name="symptom" rows="3" cols="70" readonly>{{ data['symptom'] }}</textarea></td>
+            		</tr>
+            		<tr>
+            			<td>Cause</td>
+            			<td><textarea id="cause" name="cause" rows="3" cols="70" readonly>{{ data['cause'] }}</textarea></td>
+            		</tr>
+            		<tr>
+            			<td>Resolution</td>
+            			<td><textarea id="solution" name="solution" rows="3" cols="70" readonly>{{ data['solution'] }}</textarea></td>
+            		</tr>
+            		<tr>
+            			<td>Pre applied patch</td>
+            			<td><textarea id="pre_patch" name="pre_patch" rows="3" cols="70" readonly>{{ data['pre_patch'] }}</textarea></td>
+            		</tr>
+            		<tr>
+            			<td>How to Apply Patch</td>
+            			<td><textarea id="how_patch" name="how_patch" rows="3" cols="70" readonly>{{ data['how_patch'] }}</textarea></td>
+            		</tr>
+            	</table>
+        	</form>
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,1848 @@
+[2021-06-15 14:52:48 +0900] [7160] [INFO] Starting gunicorn 20.0.4
+[2021-06-15 14:52:48 +0900] [7160] [INFO] Listening at: unix:/tmp/telechips.sock (7160)
+[2021-06-15 14:52:48 +0900] [7160] [INFO] Using worker: sync
+[2021-06-15 14:52:48 +0900] [7164] [INFO] Booting worker with pid: 7164
+[2021-06-15 14:52:48 +0900] [7165] [INFO] Booting worker with pid: 7165
+[2021-06-15 14:52:48 +0900] [7166] [INFO] Booting worker with pid: 7166
+[2021-06-15 14:52:48 +0900] [7168] [INFO] Booting worker with pid: 7168
+[2021-06-15 15:45:35 +0900] [7168] [INFO] Worker exiting (pid: 7168)
+[2021-06-15 15:45:35 +0900] [7164] [INFO] Worker exiting (pid: 7164)
+[2021-06-15 15:45:35 +0900] [7160] [INFO] Handling signal: term
+[2021-06-15 15:45:35 +0900] [7165] [INFO] Worker exiting (pid: 7165)
+[2021-06-15 15:45:35 +0900] [7166] [INFO] Worker exiting (pid: 7166)
+[2021-06-15 15:45:36 +0900] [7160] [INFO] Shutting down: Master
+[2021-06-15 15:45:36 +0900] [26767] [DEBUG] Current configuration:
+  config: None
+  bind: ['unix:/tmp/telechips.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/B180093/anaconda3/envs/telechips
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1002
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: run:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f105384d620>
+  on_reload: <function OnReload.on_reload at 0x7f105384d730>
+  when_ready: <function WhenReady.when_ready at 0x7f105384d840>
+  pre_fork: <function Prefork.pre_fork at 0x7f105384d950>
+  post_fork: <function Postfork.post_fork at 0x7f105384da60>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f105384db70>
+  worker_int: <function WorkerInt.worker_int at 0x7f105384dc80>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f105384dd90>
+  pre_exec: <function PreExec.pre_exec at 0x7f105384dea0>
+  pre_request: <function PreRequest.pre_request at 0x7f1053860048>
+  post_request: <function PostRequest.post_request at 0x7f10538600d0>
+  child_exit: <function ChildExit.child_exit at 0x7f10538601e0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f10538602f0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f1053860400>
+  on_exit: <function OnExit.on_exit at 0x7f1053860510>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-06-15 15:45:36 +0900] [26767] [INFO] Starting gunicorn 20.0.4
+[2021-06-15 15:45:36 +0900] [26767] [DEBUG] Arbiter booted
+[2021-06-15 15:45:36 +0900] [26767] [INFO] Listening at: unix:/tmp/telechips.sock (26767)
+[2021-06-15 15:45:36 +0900] [26767] [INFO] Using worker: sync
+[2021-06-15 15:45:36 +0900] [26777] [INFO] Booting worker with pid: 26777
+[2021-06-15 15:45:36 +0900] [26778] [INFO] Booting worker with pid: 26778
+[2021-06-15 15:45:36 +0900] [26779] [INFO] Booting worker with pid: 26779
+[2021-06-15 15:45:36 +0900] [26783] [INFO] Booting worker with pid: 26783
+[2021-06-15 15:45:36 +0900] [26767] [DEBUG] 4 workers
+[2021-06-15 15:45:54 +0900] [26777] [DEBUG] POST /bot/
+[2021-06-15 15:45:56 +0900] [26783] [DEBUG] POST /bot/
+[2021-06-15 15:45:57 +0900] [26777] [DEBUG] POST /bot/
+[2021-06-15 15:45:58 +0900] [26777] [DEBUG] POST /bot/
+[2021-06-15 15:45:58 +0900] [26778] [DEBUG] POST /bot/
+[2021-06-15 15:45:59 +0900] [26778] [DEBUG] POST /bot/
+[2021-06-15 15:46:00 +0900] [26778] [DEBUG] POST /bot/
+[2021-06-15 15:46:00 +0900] [26778] [DEBUG] POST /bot/
+[2021-06-15 15:46:02 +0900] [26778] [DEBUG] POST /bot/
+[2021-06-15 15:46:03 +0900] [26778] [DEBUG] POST /bot/
+[2021-06-15 15:46:03 +0900] [26778] [DEBUG] POST /bot/
+[2021-06-15 15:46:03 +0900] [26779] [DEBUG] POST /bot/
+[2021-06-15 15:46:03 +0900] [26779] [DEBUG] POST /bot/
+[2021-06-15 15:46:04 +0900] [26777] [DEBUG] POST /bot/
+[2021-06-15 15:46:04 +0900] [26779] [DEBUG] POST /bot/
+[2021-06-15 15:46:04 +0900] [26777] [DEBUG] POST /bot/
+[2021-06-15 15:46:04 +0900] [26777] [DEBUG] POST /bot/
+[2021-06-15 15:46:05 +0900] [26777] [DEBUG] POST /bot/
+[2021-06-15 15:46:11 +0900] [26779] [DEBUG] Ignoring EPIPE
+[2021-06-15 15:46:11 +0900] [26779] [DEBUG] POST /bot/
+[2021-06-15 15:46:11 +0900] [26783] [DEBUG] Ignoring EPIPE
+[2021-06-15 15:46:11 +0900] [26783] [DEBUG] POST /bot/
+[2021-06-15 15:46:11 +0900] [26778] [DEBUG] Ignoring EPIPE
+[2021-06-15 15:46:11 +0900] [26783] [DEBUG] Ignoring EPIPE
+[2021-06-15 15:46:15 +0900] [26777] [DEBUG] Ignoring EPIPE
+[2021-06-15 15:46:21 +0900] [26779] [DEBUG] Ignoring EPIPE
+[2021-06-15 15:48:51 +0900] [26767] [INFO] Handling signal: term
+[2021-06-15 15:48:51 +0900] [26778] [INFO] Worker exiting (pid: 26778)
+[2021-06-15 15:48:51 +0900] [26777] [INFO] Worker exiting (pid: 26777)
+[2021-06-15 15:48:51 +0900] [26779] [INFO] Worker exiting (pid: 26779)
+[2021-06-15 15:48:51 +0900] [26783] [INFO] Worker exiting (pid: 26783)
+[2021-06-15 15:48:52 +0900] [26767] [INFO] Shutting down: Master
+[2021-06-15 15:48:52 +0900] [28187] [DEBUG] Current configuration:
+  config: None
+  bind: ['unix:/tmp/telechips.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/B180093/anaconda3/envs/telechips
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1002
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: run:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fa50df9b620>
+  on_reload: <function OnReload.on_reload at 0x7fa50df9b730>
+  when_ready: <function WhenReady.when_ready at 0x7fa50df9b840>
+  pre_fork: <function Prefork.pre_fork at 0x7fa50df9b950>
+  post_fork: <function Postfork.post_fork at 0x7fa50df9ba60>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fa50df9bb70>
+  worker_int: <function WorkerInt.worker_int at 0x7fa50df9bc80>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fa50df9bd90>
+  pre_exec: <function PreExec.pre_exec at 0x7fa50df9bea0>
+  pre_request: <function PreRequest.pre_request at 0x7fa50dfae048>
+  post_request: <function PostRequest.post_request at 0x7fa50dfae0d0>
+  child_exit: <function ChildExit.child_exit at 0x7fa50dfae1e0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fa50dfae2f0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fa50dfae400>
+  on_exit: <function OnExit.on_exit at 0x7fa50dfae510>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-06-15 15:48:52 +0900] [28187] [INFO] Starting gunicorn 20.0.4
+[2021-06-15 15:48:52 +0900] [28187] [DEBUG] Arbiter booted
+[2021-06-15 15:48:52 +0900] [28187] [INFO] Listening at: unix:/tmp/telechips.sock (28187)
+[2021-06-15 15:48:52 +0900] [28187] [INFO] Using worker: sync
+[2021-06-15 15:48:52 +0900] [28191] [INFO] Booting worker with pid: 28191
+[2021-06-15 15:48:52 +0900] [28198] [INFO] Booting worker with pid: 28198
+[2021-06-15 15:48:52 +0900] [28200] [INFO] Booting worker with pid: 28200
+[2021-06-15 15:48:52 +0900] [28203] [INFO] Booting worker with pid: 28203
+[2021-06-15 15:48:52 +0900] [28187] [DEBUG] 4 workers
+[2021-06-15 15:49:16 +0900] [28198] [DEBUG] POST /bot/
+[2021-06-15 15:49:16 +0900] [28191] [DEBUG] POST /bot/
+[2021-06-15 15:49:18 +0900] [28191] [DEBUG] POST /bot/
+[2021-06-15 15:49:19 +0900] [28203] [DEBUG] POST /bot/
+[2021-06-15 15:49:21 +0900] [28203] [DEBUG] POST /bot/
+[2021-06-15 15:49:22 +0900] [28200] [DEBUG] POST /bot/
+[2021-06-15 15:49:23 +0900] [28191] [DEBUG] Ignoring EPIPE
+[2021-06-15 15:49:23 +0900] [28191] [DEBUG] POST /bot/
+[2021-06-15 15:49:27 +0900] [28200] [DEBUG] Ignoring EPIPE
+[2021-06-15 15:49:31 +0900] [28198] [DEBUG] Ignoring EPIPE
+[2021-06-15 16:30:04 +0900] [28198] [INFO] Worker exiting (pid: 28198)
+[2021-06-15 16:30:04 +0900] [28187] [INFO] Handling signal: term
+[2021-06-15 16:30:04 +0900] [28191] [INFO] Worker exiting (pid: 28191)
+[2021-06-15 16:30:04 +0900] [28203] [INFO] Worker exiting (pid: 28203)
+[2021-06-15 16:30:04 +0900] [28200] [INFO] Worker exiting (pid: 28200)
+[2021-06-15 16:30:04 +0900] [28187] [INFO] Shutting down: Master
+[2021-06-15 16:30:04 +0900] [43130] [DEBUG] Current configuration:
+  config: None
+  bind: ['unix:/tmp/telechips.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/B180093/anaconda3/envs/telechips
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1002
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: run:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f36f19a9620>
+  on_reload: <function OnReload.on_reload at 0x7f36f19a9730>
+  when_ready: <function WhenReady.when_ready at 0x7f36f19a9840>
+  pre_fork: <function Prefork.pre_fork at 0x7f36f19a9950>
+  post_fork: <function Postfork.post_fork at 0x7f36f19a9a60>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f36f19a9b70>
+  worker_int: <function WorkerInt.worker_int at 0x7f36f19a9c80>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f36f19a9d90>
+  pre_exec: <function PreExec.pre_exec at 0x7f36f19a9ea0>
+  pre_request: <function PreRequest.pre_request at 0x7f36f19bc048>
+  post_request: <function PostRequest.post_request at 0x7f36f19bc0d0>
+  child_exit: <function ChildExit.child_exit at 0x7f36f19bc1e0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f36f19bc2f0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f36f19bc400>
+  on_exit: <function OnExit.on_exit at 0x7f36f19bc510>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-06-15 16:30:04 +0900] [43130] [INFO] Starting gunicorn 20.0.4
+[2021-06-15 16:30:04 +0900] [43130] [DEBUG] Arbiter booted
+[2021-06-15 16:30:04 +0900] [43130] [INFO] Listening at: unix:/tmp/telechips.sock (43130)
+[2021-06-15 16:30:04 +0900] [43130] [INFO] Using worker: sync
+[2021-06-15 16:30:04 +0900] [43134] [INFO] Booting worker with pid: 43134
+[2021-06-15 16:30:04 +0900] [43136] [INFO] Booting worker with pid: 43136
+[2021-06-15 16:30:04 +0900] [43138] [INFO] Booting worker with pid: 43138
+[2021-06-15 16:30:04 +0900] [43142] [INFO] Booting worker with pid: 43142
+[2021-06-15 16:30:04 +0900] [43130] [DEBUG] 4 workers
+[2021-06-15 16:30:12 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:27 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:28 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:30 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:31 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:32 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:33 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:33 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:35 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:36 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:30:37 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:37 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:38 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:39 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:40 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:41 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:41 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:42 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:43 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:43 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:44 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:45 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:45 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:46 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:47 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:30:47 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:30:48 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:49 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:30:49 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:30:50 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:30:51 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:52 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:53 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:53 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:54 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:30:54 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:30:55 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:30:55 +0900] [43142] [DEBUG] Ignoring EPIPE
+[2021-06-15 16:30:56 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:30:59 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:30:59 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:30:59 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:30:59 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:31:00 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:00 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:31:00 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:31:00 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:31:01 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:31:01 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:01 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:01 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:01 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:01 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:02 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:31:02 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:02 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:02 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:31:02 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:03 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:03 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:03 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:03 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:31:03 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:31:04 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:04 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:31:04 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:31:04 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:31:04 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:31:04 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:05 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:05 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:31:05 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:05 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:06 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:31:08 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:08 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:09 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:09 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:09 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:09 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:31:09 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:31:09 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:10 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:10 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:10 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:10 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:31:10 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:31:11 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:11 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:11 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:11 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:11 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:12 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:12 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:31:13 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:31:28 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:31:31 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:31:32 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:31:33 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:35 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:36 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:31:37 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:31:39 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:32:18 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:32:20 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:32:27 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:32:29 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:32:32 +0900] [43134] [DEBUG] Ignoring EPIPE
+[2021-06-15 16:32:46 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:32:55 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:33:04 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:33:17 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:33:18 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:33:21 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:33:24 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:33:25 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:33:26 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:33:27 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:33:29 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:33:37 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:33:52 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:33:59 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:34:05 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:34:16 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:34:18 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:34:20 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:34:31 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:34:32 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:34:32 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:34:33 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:34:34 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:34:37 +0900] [43134] [DEBUG] Ignoring EPIPE
+[2021-06-15 16:34:39 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:34:42 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:34:44 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:35:14 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:35:16 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:35:24 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:35:25 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:35:27 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:35:28 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:35:30 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:35:31 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:35:32 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:35:34 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:35:35 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:35:37 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:35:40 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:35:42 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:35:44 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:35:45 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:35:46 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:35:47 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:35:49 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:35:51 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:35:55 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:35:56 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:35:57 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:35:59 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:36:00 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:36:01 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:36:03 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:36:06 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:36:07 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:36:08 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:36:09 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:36:11 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:36:14 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:36:16 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:36:19 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:36:22 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:36:24 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:36:27 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:36:31 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:36:37 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:37:10 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:37:11 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:37:13 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:37:15 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:37:16 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:38:18 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:38:18 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:38:23 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:38:27 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:38:30 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:38:32 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:38:35 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:39:14 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:39:15 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:39:17 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:39:22 +0900] [43142] [DEBUG] Ignoring EPIPE
+[2021-06-15 16:39:28 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:39:33 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:39:35 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:39:37 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:39:41 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:39:47 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:39:49 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:39:52 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:39:56 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:40:00 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:40:06 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:40:21 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:40:26 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:40:28 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:40:29 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:40:30 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:40:31 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:40:34 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:40:36 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:40:37 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:40:39 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:40:41 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:40:42 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:40:43 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:40:45 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:40:47 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:40:49 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:40:51 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:40:53 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:40:55 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:41:02 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:41:05 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:41:07 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:41:09 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:41:11 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:41:13 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:41:17 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:41:20 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:48:26 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:48:32 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:48:35 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:48:47 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:48:50 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:49:13 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 16:49:16 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:49:17 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:49:18 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:49:25 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:49:38 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:49:40 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:52:09 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:55:59 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:58:05 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:58:11 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:58:12 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:58:13 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 16:58:15 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:58:16 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:58:18 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:58:19 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:58:20 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:58:21 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:58:23 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 16:59:53 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 16:59:56 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 17:00:00 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 17:00:15 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 17:00:18 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 17:00:20 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 17:00:22 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 17:00:25 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 17:00:28 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 17:00:44 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 17:00:51 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 17:00:59 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 17:01:03 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:01:06 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:01:09 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:04:09 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 17:04:14 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:04:19 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:04:21 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:04:32 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:04:44 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:04:46 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:16:01 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:16:10 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:16:15 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:16:17 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:16:24 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:16:47 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:16:49 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:16:56 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:16:59 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:19:51 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:22:09 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:22:11 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:22:19 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 17:22:26 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:23:22 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:23:25 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 17:23:29 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 17:24:00 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 17:24:03 +0900] [43142] [DEBUG] POST /bot/
+[2021-06-15 17:24:09 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 17:24:11 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 17:24:19 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 17:24:25 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 17:24:52 +0900] [43134] [DEBUG] POST /bot/
+[2021-06-15 17:25:32 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:25:48 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:25:53 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:25:54 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:25:56 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:25:57 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:25:58 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:26:00 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:26:16 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:26:24 +0900] [43136] [DEBUG] POST /bot/
+[2021-06-15 17:26:27 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 17:27:18 +0900] [43138] [DEBUG] POST /bot/
+[2021-06-15 17:50:56 +0900] [43138] [DEBUG] GET /owa/auth/logon.aspx
+[2021-06-15 18:01:01 +0900] [43130] [INFO] Handling signal: term
+[2021-06-15 18:01:01 +0900] [43138] [INFO] Worker exiting (pid: 43138)
+[2021-06-15 18:01:01 +0900] [43136] [INFO] Worker exiting (pid: 43136)
+[2021-06-15 18:01:01 +0900] [43134] [INFO] Worker exiting (pid: 43134)
+[2021-06-15 18:01:01 +0900] [43142] [INFO] Worker exiting (pid: 43142)
+[2021-06-15 18:01:01 +0900] [43130] [INFO] Shutting down: Master
+[2021-06-15 18:01:01 +0900] [77874] [DEBUG] Current configuration:
+  config: None
+  bind: ['unix:/tmp/telechips.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/B180093/anaconda3/envs/telechips
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1002
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: run:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f2776226620>
+  on_reload: <function OnReload.on_reload at 0x7f2776226730>
+  when_ready: <function WhenReady.when_ready at 0x7f2776226840>
+  pre_fork: <function Prefork.pre_fork at 0x7f2776226950>
+  post_fork: <function Postfork.post_fork at 0x7f2776226a60>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f2776226b70>
+  worker_int: <function WorkerInt.worker_int at 0x7f2776226c80>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f2776226d90>
+  pre_exec: <function PreExec.pre_exec at 0x7f2776226ea0>
+  pre_request: <function PreRequest.pre_request at 0x7f2776239048>
+  post_request: <function PostRequest.post_request at 0x7f27762390d0>
+  child_exit: <function ChildExit.child_exit at 0x7f27762391e0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f27762392f0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f2776239400>
+  on_exit: <function OnExit.on_exit at 0x7f2776239510>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-06-15 18:01:01 +0900] [77874] [INFO] Starting gunicorn 20.0.4
+[2021-06-15 18:01:01 +0900] [77874] [DEBUG] Arbiter booted
+[2021-06-15 18:01:01 +0900] [77874] [INFO] Listening at: unix:/tmp/telechips.sock (77874)
+[2021-06-15 18:01:01 +0900] [77874] [INFO] Using worker: sync
+[2021-06-15 18:01:01 +0900] [77879] [INFO] Booting worker with pid: 77879
+[2021-06-15 18:01:01 +0900] [77880] [INFO] Booting worker with pid: 77880
+[2021-06-15 18:01:01 +0900] [77882] [INFO] Booting worker with pid: 77882
+[2021-06-15 18:01:02 +0900] [77886] [INFO] Booting worker with pid: 77886
+[2021-06-15 18:01:02 +0900] [77874] [DEBUG] 4 workers
+[2021-06-15 18:01:18 +0900] [77874] [INFO] Handling signal: term
+[2021-06-15 18:01:18 +0900] [77880] [INFO] Worker exiting (pid: 77880)
+[2021-06-15 18:01:18 +0900] [77886] [INFO] Worker exiting (pid: 77886)
+[2021-06-15 18:01:18 +0900] [77879] [INFO] Worker exiting (pid: 77879)
+[2021-06-15 18:01:18 +0900] [77882] [INFO] Worker exiting (pid: 77882)
+[2021-06-15 18:01:18 +0900] [77874] [INFO] Shutting down: Master
+[2021-06-15 18:01:18 +0900] [78026] [DEBUG] Current configuration:
+  config: None
+  bind: ['unix:/tmp/telechips.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/B180093/anaconda3/envs/telechips
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1002
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: run:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f8ce7091620>
+  on_reload: <function OnReload.on_reload at 0x7f8ce7091730>
+  when_ready: <function WhenReady.when_ready at 0x7f8ce7091840>
+  pre_fork: <function Prefork.pre_fork at 0x7f8ce7091950>
+  post_fork: <function Postfork.post_fork at 0x7f8ce7091a60>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f8ce7091b70>
+  worker_int: <function WorkerInt.worker_int at 0x7f8ce7091c80>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f8ce7091d90>
+  pre_exec: <function PreExec.pre_exec at 0x7f8ce7091ea0>
+  pre_request: <function PreRequest.pre_request at 0x7f8ce70a4048>
+  post_request: <function PostRequest.post_request at 0x7f8ce70a40d0>
+  child_exit: <function ChildExit.child_exit at 0x7f8ce70a41e0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f8ce70a42f0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f8ce70a4400>
+  on_exit: <function OnExit.on_exit at 0x7f8ce70a4510>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-06-15 18:01:18 +0900] [78026] [INFO] Starting gunicorn 20.0.4
+[2021-06-15 18:01:18 +0900] [78026] [DEBUG] Arbiter booted
+[2021-06-15 18:01:18 +0900] [78026] [INFO] Listening at: unix:/tmp/telechips.sock (78026)
+[2021-06-15 18:01:18 +0900] [78026] [INFO] Using worker: sync
+[2021-06-15 18:01:18 +0900] [78030] [INFO] Booting worker with pid: 78030
+[2021-06-15 18:01:18 +0900] [78031] [INFO] Booting worker with pid: 78031
+[2021-06-15 18:01:18 +0900] [78032] [INFO] Booting worker with pid: 78032
+[2021-06-15 18:01:18 +0900] [78033] [INFO] Booting worker with pid: 78033
+[2021-06-15 18:01:19 +0900] [78026] [DEBUG] 4 workers
+[2021-06-15 18:01:32 +0900] [78033] [INFO] Worker exiting (pid: 78033)
+[2021-06-15 18:01:32 +0900] [78031] [INFO] Worker exiting (pid: 78031)
+[2021-06-15 18:01:32 +0900] [78026] [INFO] Handling signal: term
+[2021-06-15 18:01:32 +0900] [78030] [INFO] Worker exiting (pid: 78030)
+[2021-06-15 18:01:32 +0900] [78032] [INFO] Worker exiting (pid: 78032)
+[2021-06-15 18:01:32 +0900] [78026] [INFO] Shutting down: Master
+[2021-06-15 18:02:01 +0900] [78336] [DEBUG] Current configuration:
+  config: None
+  bind: ['unix:/tmp/telechips.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/B180093/anaconda3/envs/telechips
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1002
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: run:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f909aa84620>
+  on_reload: <function OnReload.on_reload at 0x7f909aa84730>
+  when_ready: <function WhenReady.when_ready at 0x7f909aa84840>
+  pre_fork: <function Prefork.pre_fork at 0x7f909aa84950>
+  post_fork: <function Postfork.post_fork at 0x7f909aa84a60>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f909aa84b70>
+  worker_int: <function WorkerInt.worker_int at 0x7f909aa84c80>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f909aa84d90>
+  pre_exec: <function PreExec.pre_exec at 0x7f909aa84ea0>
+  pre_request: <function PreRequest.pre_request at 0x7f909aa97048>
+  post_request: <function PostRequest.post_request at 0x7f909aa970d0>
+  child_exit: <function ChildExit.child_exit at 0x7f909aa971e0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f909aa972f0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f909aa97400>
+  on_exit: <function OnExit.on_exit at 0x7f909aa97510>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-06-15 18:02:01 +0900] [78336] [INFO] Starting gunicorn 20.0.4
+[2021-06-15 18:02:01 +0900] [78336] [DEBUG] Arbiter booted
+[2021-06-15 18:02:01 +0900] [78336] [INFO] Listening at: unix:/tmp/telechips.sock (78336)
+[2021-06-15 18:02:01 +0900] [78336] [INFO] Using worker: sync
+[2021-06-15 18:02:01 +0900] [78345] [INFO] Booting worker with pid: 78345
+[2021-06-15 18:02:01 +0900] [78346] [INFO] Booting worker with pid: 78346
+[2021-06-15 18:02:01 +0900] [78348] [INFO] Booting worker with pid: 78348
+[2021-06-15 18:02:01 +0900] [78351] [INFO] Booting worker with pid: 78351
+[2021-06-15 18:02:01 +0900] [78336] [DEBUG] 4 workers
+[2021-06-15 18:02:37 +0900] [78345] [DEBUG] POST /bot/
+[2021-06-15 18:03:09 +0900] [78345] [DEBUG] POST /bot/
+[2021-06-15 18:04:48 +0900] [78345] [DEBUG] POST /bot/
+[2021-06-15 18:04:50 +0900] [78345] [DEBUG] POST /bot/
+[2021-06-15 18:07:54 +0900] [78336] [INFO] Handling signal: term
+[2021-06-15 18:07:54 +0900] [78348] [INFO] Worker exiting (pid: 78348)
+[2021-06-15 18:07:54 +0900] [78346] [INFO] Worker exiting (pid: 78346)
+[2021-06-15 18:07:54 +0900] [78351] [INFO] Worker exiting (pid: 78351)
+[2021-06-15 18:07:54 +0900] [78345] [INFO] Worker exiting (pid: 78345)
+[2021-06-15 18:07:54 +0900] [78336] [INFO] Shutting down: Master
+[2021-06-15 18:07:54 +0900] [80856] [DEBUG] Current configuration:
+  config: None
+  bind: ['unix:/tmp/telechips.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/B180093/anaconda3/envs/telechips
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1002
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: run:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f605b779620>
+  on_reload: <function OnReload.on_reload at 0x7f605b779730>
+  when_ready: <function WhenReady.when_ready at 0x7f605b779840>
+  pre_fork: <function Prefork.pre_fork at 0x7f605b779950>
+  post_fork: <function Postfork.post_fork at 0x7f605b779a60>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f605b779b70>
+  worker_int: <function WorkerInt.worker_int at 0x7f605b779c80>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f605b779d90>
+  pre_exec: <function PreExec.pre_exec at 0x7f605b779ea0>
+  pre_request: <function PreRequest.pre_request at 0x7f605b78c048>
+  post_request: <function PostRequest.post_request at 0x7f605b78c0d0>
+  child_exit: <function ChildExit.child_exit at 0x7f605b78c1e0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f605b78c2f0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f605b78c400>
+  on_exit: <function OnExit.on_exit at 0x7f605b78c510>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-06-15 18:07:54 +0900] [80856] [INFO] Starting gunicorn 20.0.4
+[2021-06-15 18:07:54 +0900] [80856] [DEBUG] Arbiter booted
+[2021-06-15 18:07:54 +0900] [80856] [INFO] Listening at: unix:/tmp/telechips.sock (80856)
+[2021-06-15 18:07:54 +0900] [80856] [INFO] Using worker: sync
+[2021-06-15 18:07:54 +0900] [80867] [INFO] Booting worker with pid: 80867
+[2021-06-15 18:07:54 +0900] [80868] [INFO] Booting worker with pid: 80868
+[2021-06-15 18:07:54 +0900] [80869] [INFO] Booting worker with pid: 80869
+[2021-06-15 18:07:54 +0900] [80871] [INFO] Booting worker with pid: 80871
+[2021-06-15 18:07:54 +0900] [80856] [DEBUG] 4 workers
+[2021-06-15 18:08:19 +0900] [80867] [DEBUG] POST /bot/
+[2021-06-15 18:08:24 +0900] [80867] [DEBUG] POST /bot/
+[2021-06-15 18:08:30 +0900] [80867] [DEBUG] POST /bot/
+[2021-06-15 18:08:32 +0900] [80871] [DEBUG] POST /bot/
+[2021-06-15 18:08:34 +0900] [80871] [DEBUG] POST /bot/
+[2021-06-15 18:19:34 +0900] [80868] [DEBUG] POST /rest/tcs
+[2021-06-15 18:21:58 +0900] [80867] [DEBUG] GET /Telerik.Web.UI.WebResource.axd
+[2021-06-15 19:19:26 +0900] [80871] [DEBUG] GET /owa/
+[2021-06-15 19:46:15 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-15 19:46:16 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-15 19:46:17 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-15 19:46:19 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-15 19:46:20 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-15 19:46:21 +0900] [80868] [DEBUG] POST /bot/
+[2021-06-15 19:46:23 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-15 19:46:24 +0900] [80867] [DEBUG] POST /bot/
+[2021-06-15 19:46:25 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-15 19:46:26 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-15 19:46:27 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-15 19:46:29 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-15 19:46:32 +0900] [80868] [DEBUG] POST /bot/
+[2021-06-15 19:46:34 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-15 19:46:35 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-15 19:46:36 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-15 19:46:37 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-15 20:41:55 +0900] [80868] [DEBUG] GET /
+[2021-06-15 20:41:55 +0900] [80871] [DEBUG] GET /
+[2021-06-15 20:42:32 +0900] [80867] [DEBUG] HEAD /
+[2021-06-15 21:48:50 +0900] [80871] [DEBUG] OPTIONS /
+[2021-06-15 22:35:24 +0900] [80867] [DEBUG] POST /bot/
+[2021-06-15 22:35:27 +0900] [80867] [DEBUG] POST /bot/
+[2021-06-15 22:35:33 +0900] [80868] [DEBUG] POST /bot/
+[2021-06-15 22:35:36 +0900] [80868] [DEBUG] POST /bot/
+[2021-06-15 22:35:41 +0900] [80868] [DEBUG] POST /bot/
+[2021-06-15 22:35:47 +0900] [80868] [DEBUG] POST /bot/
+[2021-06-15 22:46:56 +0900] [80867] [DEBUG] GET /remote/login
+[2021-06-15 23:38:49 +0900] [80869] [DEBUG] GET /
+[2021-06-16 01:23:23 +0900] [80868] [DEBUG] POST /GponForm/diag_Form
+[2021-06-16 02:05:26 +0900] [80871] [DEBUG] GET /
+[2021-06-16 03:21:08 +0900] [80869] [DEBUG] GET /actuator/health
+[2021-06-16 04:40:46 +0900] [80868] [DEBUG] GET /
+[2021-06-16 04:40:47 +0900] [80868] [DEBUG] GET /
+[2021-06-16 05:35:22 +0900] [80869] [DEBUG] POST /Autodiscover/Autodiscover.xml
+[2021-06-16 05:35:25 +0900] [80869] [DEBUG] POST /mifs/.;/services/LogService
+[2021-06-16 05:35:27 +0900] [80868] [DEBUG] GET /
+[2021-06-16 05:35:31 +0900] [80867] [DEBUG] GET /
+[2021-06-16 05:35:31 +0900] [80867] [DEBUG] GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[2021-06-16 05:35:33 +0900] [80867] [DEBUG] GET /console/
+[2021-06-16 05:35:37 +0900] [80867] [DEBUG] GET /wp-content/plugins/wp-file-manager/readme.txt
+[2021-06-16 05:35:38 +0900] [80867] [DEBUG] GET /_ignition/execute-solution
+[2021-06-16 05:35:40 +0900] [80867] [DEBUG] POST /api/jsonws/invoke
+[2021-06-16 05:40:36 +0900] [80871] [DEBUG] GET /owa/
+[2021-06-16 06:16:47 +0900] [80867] [DEBUG] GET /
+[2021-06-16 06:59:25 +0900] [80868] [DEBUG] GET /ReportServer
+[2021-06-16 07:12:16 +0900] [80868] [DEBUG] GET /
+[2021-06-16 07:20:53 +0900] [80867] [DEBUG] GET /login
+[2021-06-16 07:46:49 +0900] [80868] [DEBUG] GET /
+[2021-06-16 07:47:13 +0900] [80867] [DEBUG] GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+[2021-06-16 08:28:43 +0900] [80869] [DEBUG] POST /rest/tcs
+[2021-06-16 08:28:48 +0900] [80869] [DEBUG] POST /rest/tcs
+[2021-06-16 08:28:48,748] ERROR in app: Exception on /rest/tcs [POST]
+Traceback (most recent call last):
+  File "/home/B180093/anaconda3/envs/telechips/main/rest.py", line 264, in tcs
+    r3 = requests.put('https://tims.telechips.com:8443/rest/api/2/issue/' + tcs_data[0]['issue']['fields']['customfield_11903'].split('/')[-1], data=json.dumps(data2), headers=headers, auth=(id_pw['os_username'], id_pw['os_password']))
+KeyError: 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/B180093/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/B180093/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/B180093/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/B180093/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/B180093/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/B180093/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/B180093/anaconda3/envs/telechips/main/rest.py", line 290, in tcs
+    'text': 'TCS 이슈 삭제 실패' + r3.text
+AttributeError: 'str' object has no attribute 'text'
+[2021-06-16 08:28:53 +0900] [80869] [DEBUG] POST /rest/tcs
+[2021-06-16 08:28:53,498] ERROR in app: Exception on /rest/tcs [POST]
+Traceback (most recent call last):
+  File "/home/B180093/anaconda3/envs/telechips/main/rest.py", line 264, in tcs
+    r3 = requests.put('https://tims.telechips.com:8443/rest/api/2/issue/' + tcs_data[0]['issue']['fields']['customfield_11903'].split('/')[-1], data=json.dumps(data2), headers=headers, auth=(id_pw['os_username'], id_pw['os_password']))
+KeyError: 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/B180093/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/B180093/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/B180093/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/B180093/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/B180093/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/B180093/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/B180093/anaconda3/envs/telechips/main/rest.py", line 290, in tcs
+    'text': 'TCS 이슈 삭제 실패' + r3.text
+AttributeError: 'str' object has no attribute 'text'
+[2021-06-16 08:31:03 +0900] [80867] [DEBUG] POST /bot/
+[2021-06-16 08:31:05 +0900] [80871] [DEBUG] POST /bot/
+[2021-06-16 08:36:40 +0900] [80867] [DEBUG] POST /bot/
+[2021-06-16 08:37:06 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-16 08:37:07 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-16 08:37:09 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-16 08:37:15 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-16 08:37:23 +0900] [80868] [DEBUG] POST /bot/
+[2021-06-16 08:38:05 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-16 08:38:14 +0900] [80869] [DEBUG] POST /bot/
+[2021-06-16 08:40:15 +0900] [80869] [INFO] Worker exiting (pid: 80869)
+[2021-06-16 08:40:15 +0900] [80871] [INFO] Worker exiting (pid: 80871)
+[2021-06-16 08:40:15 +0900] [80868] [INFO] Worker exiting (pid: 80868)
+[2021-06-16 08:40:15 +0900] [80856] [INFO] Handling signal: term
+[2021-06-16 08:40:15 +0900] [80867] [INFO] Worker exiting (pid: 80867)
+[2021-06-16 08:40:16 +0900] [80856] [INFO] Shutting down: Master
+[2021-06-16 08:40:16 +0900] [86166] [DEBUG] Current configuration:
+  config: None
+  bind: ['unix:/tmp/telechips.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/B180093/anaconda3/envs/telechips
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1002
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: run:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f69ecae7620>
+  on_reload: <function OnReload.on_reload at 0x7f69ecae7730>
+  when_ready: <function WhenReady.when_ready at 0x7f69ecae7840>
+  pre_fork: <function Prefork.pre_fork at 0x7f69ecae7950>
+  post_fork: <function Postfork.post_fork at 0x7f69ecae7a60>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f69ecae7b70>
+  worker_int: <function WorkerInt.worker_int at 0x7f69ecae7c80>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f69ecae7d90>
+  pre_exec: <function PreExec.pre_exec at 0x7f69ecae7ea0>
+  pre_request: <function PreRequest.pre_request at 0x7f69ecafa048>
+  post_request: <function PostRequest.post_request at 0x7f69ecafa0d0>
+  child_exit: <function ChildExit.child_exit at 0x7f69ecafa1e0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f69ecafa2f0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f69ecafa400>
+  on_exit: <function OnExit.on_exit at 0x7f69ecafa510>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-06-16 08:40:16 +0900] [86166] [INFO] Starting gunicorn 20.0.4
+[2021-06-16 08:40:16 +0900] [86166] [DEBUG] Arbiter booted
+[2021-06-16 08:40:16 +0900] [86166] [INFO] Listening at: unix:/tmp/telechips.sock (86166)
+[2021-06-16 08:40:16 +0900] [86166] [INFO] Using worker: sync
+[2021-06-16 08:40:16 +0900] [86170] [INFO] Booting worker with pid: 86170
+[2021-06-16 08:40:16 +0900] [86171] [INFO] Booting worker with pid: 86171
+[2021-06-16 08:40:16 +0900] [86173] [INFO] Booting worker with pid: 86173
+[2021-06-16 08:40:16 +0900] [86176] [INFO] Booting worker with pid: 86176
+[2021-06-16 08:40:16 +0900] [86166] [DEBUG] 4 workers
+[2021-06-16 08:40:30 +0900] [86176] [DEBUG] POST /bot/
+[2021-06-16 08:40:48 +0900] [86170] [DEBUG] POST /bot/
+[2021-06-16 08:40:59 +0900] [86171] [DEBUG] POST /bot/
+[2021-06-16 08:41:13 +0900] [86171] [DEBUG] POST /bot/
+[2021-06-16 08:41:18 +0900] [86171] [DEBUG] POST /bot/
+[2021-06-16 08:54:36 +0900] [86173] [DEBUG] POST /bot/
+[2021-06-16 08:54:39 +0900] [86176] [DEBUG] POST /bot/
+[2021-06-16 08:56:38 +0900] [86166] [INFO] Handling signal: term
+[2021-06-16 08:56:38 +0900] [86170] [INFO] Worker exiting (pid: 86170)
+[2021-06-16 08:56:38 +0900] [86176] [INFO] Worker exiting (pid: 86176)
+[2021-06-16 08:56:38 +0900] [86173] [INFO] Worker exiting (pid: 86173)
+[2021-06-16 08:56:38 +0900] [86171] [INFO] Worker exiting (pid: 86171)
+[2021-06-16 08:56:38 +0900] [86166] [INFO] Shutting down: Master
+[2021-06-16 08:56:38 +0900] [92102] [DEBUG] Current configuration:
+  config: None
+  bind: ['unix:/tmp/telechips.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/B180093/anaconda3/envs/telechips
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1002
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: run:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7febcdc63620>
+  on_reload: <function OnReload.on_reload at 0x7febcdc63730>
+  when_ready: <function WhenReady.when_ready at 0x7febcdc63840>
+  pre_fork: <function Prefork.pre_fork at 0x7febcdc63950>
+  post_fork: <function Postfork.post_fork at 0x7febcdc63a60>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7febcdc63b70>
+  worker_int: <function WorkerInt.worker_int at 0x7febcdc63c80>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7febcdc63d90>
+  pre_exec: <function PreExec.pre_exec at 0x7febcdc63ea0>
+  pre_request: <function PreRequest.pre_request at 0x7febcdc76048>
+  post_request: <function PostRequest.post_request at 0x7febcdc760d0>
+  child_exit: <function ChildExit.child_exit at 0x7febcdc761e0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7febcdc762f0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7febcdc76400>
+  on_exit: <function OnExit.on_exit at 0x7febcdc76510>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-06-16 08:56:38 +0900] [92102] [INFO] Starting gunicorn 20.0.4
+[2021-06-16 08:56:38 +0900] [92102] [DEBUG] Arbiter booted
+[2021-06-16 08:56:38 +0900] [92102] [INFO] Listening at: unix:/tmp/telechips.sock (92102)
+[2021-06-16 08:56:38 +0900] [92102] [INFO] Using worker: sync
+[2021-06-16 08:56:38 +0900] [92107] [INFO] Booting worker with pid: 92107
+[2021-06-16 08:56:38 +0900] [92108] [INFO] Booting worker with pid: 92108
+[2021-06-16 08:56:38 +0900] [92110] [INFO] Booting worker with pid: 92110
+[2021-06-16 08:56:38 +0900] [92114] [INFO] Booting worker with pid: 92114
+[2021-06-16 08:56:38 +0900] [92102] [DEBUG] 4 workers
+[2021-06-16 09:03:29 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:32:32 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:32:33 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:32:34 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:32:35 +0900] [92108] [DEBUG] POST /bot/
+[2021-06-16 09:32:36 +0900] [92108] [DEBUG] POST /bot/
+[2021-06-16 09:32:37 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:32:38 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:32:39 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:32:42 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:32:44 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:32:46 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:32:48 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:32:50 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:32:51 +0900] [92114] [DEBUG] POST /bot/
+[2021-06-16 09:32:52 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:32:53 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:32:54 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:32:57 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:32:59 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:00 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:01 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:02 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:03 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:04 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:08 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:09 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:10 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:11 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:12 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:13 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:14 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:17 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:18 +0900] [92114] [DEBUG] POST /bot/
+[2021-06-16 09:33:19 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:20 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:21 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:22 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:25 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:27 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:30 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:33 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:47 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:48 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:49 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:33:50 +0900] [92107] [DEBUG] POST /bot/
+[2021-06-16 09:40:33 +0900] [92110] [DEBUG] POST /bot/
+[2021-06-16 10:05:07 +0900] [92102] [INFO] Handling signal: term
+[2021-06-16 10:05:07 +0900] [92114] [INFO] Worker exiting (pid: 92114)
+[2021-06-16 10:05:07 +0900] [92107] [INFO] Worker exiting (pid: 92107)
+[2021-06-16 10:05:07 +0900] [92110] [INFO] Worker exiting (pid: 92110)
+[2021-06-16 10:05:07 +0900] [92108] [INFO] Worker exiting (pid: 92108)
+[2021-06-16 10:05:07 +0900] [92102] [INFO] Shutting down: Master
+[2021-06-16 10:05:07 +0900] [117083] [DEBUG] Current configuration:
+  config: None
+  bind: ['unix:/tmp/telechips.sock']
+  backlog: 2048
+  workers: 4
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/B180093/anaconda3/envs/telechips
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1002
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: run:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f93dd63a620>
+  on_reload: <function OnReload.on_reload at 0x7f93dd63a730>
+  when_ready: <function WhenReady.when_ready at 0x7f93dd63a840>
+  pre_fork: <function Prefork.pre_fork at 0x7f93dd63a950>
+  post_fork: <function Postfork.post_fork at 0x7f93dd63aa60>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f93dd63ab70>
+  worker_int: <function WorkerInt.worker_int at 0x7f93dd63ac80>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f93dd63ad90>
+  pre_exec: <function PreExec.pre_exec at 0x7f93dd63aea0>
+  pre_request: <function PreRequest.pre_request at 0x7f93dd64d048>
+  post_request: <function PostRequest.post_request at 0x7f93dd64d0d0>
+  child_exit: <function ChildExit.child_exit at 0x7f93dd64d1e0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f93dd64d2f0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f93dd64d400>
+  on_exit: <function OnExit.on_exit at 0x7f93dd64d510>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-06-16 10:05:07 +0900] [117083] [INFO] Starting gunicorn 20.0.4
+[2021-06-16 10:05:07 +0900] [117083] [DEBUG] Arbiter booted
+[2021-06-16 10:05:07 +0900] [117083] [INFO] Listening at: unix:/tmp/telechips.sock (117083)
+[2021-06-16 10:05:07 +0900] [117083] [INFO] Using worker: sync
+[2021-06-16 10:05:07 +0900] [117094] [INFO] Booting worker with pid: 117094
+[2021-06-16 10:05:08 +0900] [117095] [INFO] Booting worker with pid: 117095
+[2021-06-16 10:05:08 +0900] [117099] [INFO] Booting worker with pid: 117099
+[2021-06-16 10:05:08 +0900] [117102] [INFO] Booting worker with pid: 117102
+[2021-06-16 10:05:08 +0900] [117083] [DEBUG] 4 workers
+[2021-06-16 10:05:21 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:19:19 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:19:21 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:19:24 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:20:06 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 10:20:15 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 10:20:22 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:20:24 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:20:27 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:20:34 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:21:09 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:21:30 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 10:21:39 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:21:51 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 10:22:29 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:22:31 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:22:32 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:22:34 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:22:35 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:22:38 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:22:39 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:22:41 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:22:43 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:22:50 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:22:53 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 10:22:56 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:22:56 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:22:58 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:22:59 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:23:00 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:23:02 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:23:06 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:23:09 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:23:14 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:23:24 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:23:25 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:23:27 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:23:29 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:23:34 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:23:39 +0900] [117102] [DEBUG] Ignoring EPIPE
+[2021-06-16 10:23:43 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:23:47 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 10:23:48 +0900] [117102] [DEBUG] Ignoring EPIPE
+[2021-06-16 10:23:50 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:23:52 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:23:55 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:23:57 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:23:59 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:24:00 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:24:01 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:24:04 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:24:12 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:24:17 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:25:11 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:25:13 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:25:15 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:25:17 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:25:19 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 10:25:21 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:25:24 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:25:59 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:26:08 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:26:12 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 10:26:37 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:26:45 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 10:26:50 +0900] [117095] [DEBUG] Ignoring EPIPE
+[2021-06-16 10:26:53 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 10:27:34 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 10:27:38 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:27:49 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 10:27:54 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 10:28:18 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 10:29:39 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 10:30:09 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:30:12 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:30:13 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:30:16 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:30:18 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:30:37 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:30:40 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:31:18 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:32:27 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:32:31 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 10:33:57 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:34:01 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:34:04 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 10:34:07 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:34:08 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:34:10 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:34:15 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 10:34:16 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:36:09 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 10:36:17 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:36:19 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:36:21 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:36:26 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:36:27 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:36:30 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:36:34 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:39:29 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:39:31 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:39:43 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:43:34 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 10:45:37 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:45:58 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:46:04 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 10:46:18 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:46:26 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:46:27 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:46:30 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:46:34 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 10:46:35 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:46:37 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:46:40 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 10:46:52 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:46:57 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:47:02 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:47:09 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:47:12 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:47:17 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:52:54 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:53:24 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:53:26 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:53:29 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 10:57:03 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 10:57:05 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 10:57:17 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 10:57:25 +0900] [117099] [DEBUG] GET /
+[2021-06-16 10:57:28 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 10:57:31 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 10:57:34 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 10:57:51 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 10:57:53 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 11:08:54 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 11:09:00 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 11:09:07 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 11:09:17 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 11:09:19 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 11:11:12 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 11:11:17 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 11:11:27 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 11:11:31 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 11:11:52 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 11:11:56 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 11:12:03 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 11:29:12 +0900] [117094] [DEBUG] POST /rest/tims
+[2021-06-16 11:29:37 +0900] [117094] [DEBUG] POST /rest/tims
+[2021-06-16 11:29:38 +0900] [117102] [DEBUG] POST /rest/tims
+[2021-06-16 11:29:39 +0900] [117094] [DEBUG] POST /rest/tims
+[2021-06-16 11:29:44 +0900] [117094] [DEBUG] POST /rest/tims
+[2021-06-16 11:29:46 +0900] [117094] [DEBUG] POST /rest/tims
+[2021-06-16 11:36:44 +0900] [117099] [DEBUG] POST /rest/tims
+[2021-06-16 11:37:20 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:37:21 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:38:34 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:38:54 +0900] [117099] [DEBUG] GET /
+[2021-06-16 11:39:06 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:39:52 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:40:13 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:41:11 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:41:27 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:42:16 +0900] [117094] [DEBUG] POST /rest/tims
+[2021-06-16 11:42:27 +0900] [117094] [DEBUG] POST /rest/tims
+[2021-06-16 11:42:35 +0900] [117094] [DEBUG] POST /rest/tims
+[2021-06-16 11:42:48 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:43:07 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:43:21 +0900] [117102] [DEBUG] POST /rest/tims
+[2021-06-16 11:43:46 +0900] [117094] [DEBUG] POST /rest/tims
+[2021-06-16 11:43:46 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:44:09 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:44:27 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:44:33 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 11:44:35 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:44:37 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 11:44:42 +0900] [117099] [DEBUG] POST /rest/tims
+[2021-06-16 11:44:44 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 11:44:45 +0900] [117099] [DEBUG] POST /rest/tims
+[2021-06-16 11:44:47 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 11:44:56 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 11:44:56,668] ERROR in app: Exception on /bot/ [POST]
+Traceback (most recent call last):
+  File "/home/B180093/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/B180093/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/B180093/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/B180093/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/B180093/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/B180093/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/B180093/anaconda3/envs/telechips/main/bot.py", line 184, in bot
+    'data': data['content']['text'],
+KeyError: 'text'
+[2021-06-16 11:45:04 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 11:45:06 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 11:45:10 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 11:45:18 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 11:45:21 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 11:45:25 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 11:45:28 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 11:45:30 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 11:45:33 +0900] [117099] [DEBUG] POST /rest/tims
+[2021-06-16 11:45:36 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 11:45:40 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 11:45:41 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 11:45:42 +0900] [117099] [DEBUG] POST /rest/tims
+[2021-06-16 11:45:48 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 11:45:50 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 11:45:51 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:45:51 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 11:45:52 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 11:45:57 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 11:45:59 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 11:46:01 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 11:46:09 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 11:46:44 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:46:56 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:51:46 +0900] [117102] [DEBUG] POST /rest/tims
+[2021-06-16 11:52:52 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:55:13 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:55:29 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:56:11 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:57:14 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 11:58:34 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 12:01:57 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 12:01:58 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 12:03:18 +0900] [117095] [DEBUG] POST /rest/tims
+[2021-06-16 12:15:20 +0900] [117095] [DEBUG] GET /
+[2021-06-16 12:41:19 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 12:41:26 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 12:45:18 +0900] [117099] [DEBUG] GET /images/Nxrs4tAtO/HCw4_2FQ7o69dmQEodXU/_2Fua56jJgWqt8tN1Tx/0M9Tus5G1nAOe_2BJflcrm/2nz3T7AxG_2Fd/YnZ7Cn6A/zq1HlKYZhiFyQLgflmvIbb1/yQL2MK3UaK/00uQsiMnxrcs4C9gN/xpGuwRLuq6tH/7YwEr.avi
+[2021-06-16 13:48:02 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 13:48:05 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 13:48:09 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 13:48:11 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 13:48:15 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 13:48:20 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 13:48:23 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 13:48:31 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 13:48:55 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 13:50:26 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 13:50:32 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 13:50:35 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 13:56:55 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 13:57:00 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 13:57:04 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 13:57:07 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 13:57:21 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 13:59:05 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 13:59:08 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 13:59:17 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 13:59:25 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:00:40 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:00:43 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:00:48 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:00:57 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 14:01:04 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:01:07 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:01:11 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:01:41 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:01:43 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:01:47 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 14:01:57 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 14:31:16 +0900] [117099] [DEBUG] POST /rest/tims
+[2021-06-16 14:34:22 +0900] [117099] [DEBUG] POST /rest/tims
+[2021-06-16 14:39:59 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 14:40:02 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 14:40:06 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 14:40:17 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:40:36 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 14:40:39 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:40:57 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:40:59 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:41:07 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 14:41:12 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:41:16 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:41:26 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:41:46 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:41:49 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:41:53 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:42:06 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 14:54:18 +0900] [117099] [DEBUG] GET /
+[2021-06-16 15:25:15 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 15:25:21 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 15:25:28 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 15:53:03 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 15:53:07 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 15:53:13 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 15:53:22 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 15:53:43 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 16:03:02 +0900] [117094] [DEBUG] GET /.env
+[2021-06-16 16:03:03 +0900] [117094] [DEBUG] POST /
+[2021-06-16 16:17:42 +0900] [117102] [DEBUG] GET /
+[2021-06-16 17:08:15 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 17:19:25 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 17:19:29 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 17:19:33 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 17:19:36 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 17:19:38 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 17:19:43 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 17:19:48 +0900] [117102] [DEBUG] Ignoring EPIPE
+[2021-06-16 17:26:36 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 17:26:39 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 17:29:01 +0900] [117095] [DEBUG] POST /bot/
+[2021-06-16 17:29:11 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 17:31:15 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 17:31:19 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 17:51:19 +0900] [117094] [DEBUG] GET /owa/auth/logon.aspx
+[2021-06-16 17:58:03 +0900] [117102] [DEBUG] GET /
+[2021-06-16 17:58:21 +0900] [117102] [DEBUG] GET /owa/
+[2021-06-16 18:03:58 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 18:04:04 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 18:04:27 +0900] [117099] [DEBUG] POST /bot/
+[2021-06-16 18:27:20 +0900] [117094] [DEBUG] POST /bot/
+[2021-06-16 18:27:22 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 18:27:32 +0900] [117102] [DEBUG] POST /bot/
+[2021-06-16 18:31:24 +0900] [117083] [INFO] Handling signal: term
+[2021-06-16 18:31:24 +0900] [117099] [INFO] Worker exiting (pid: 117099)
+[2021-06-16 18:31:24 +0900] [117094] [INFO] Worker exiting (pid: 117094)
+[2021-06-16 18:31:24 +0900] [117095] [INFO] Worker exiting (pid: 117095)
+[2021-06-16 18:31:24 +0900] [117102] [INFO] Worker exiting (pid: 117102)
+[2021-06-16 18:31:25 +0900] [117083] [INFO] Shutting down: Master
