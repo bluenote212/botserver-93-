@@ -144,14 +144,14 @@ def css():  # Patch: CSS에 실제로 patch를 업로드하는 함수
         sdk_name += data['sdkIdx'].split('_')[i] + '_'
 
     f1 = request.files['patchFile']
-    f1_ext = f1.filename.split('.')[1]
+    f1_ext = f1.filename.split('.')[-1]
     f1.save('/home/B180093/anaconda3/envs/telechips/main/static/download/' + sdk_name[:-1] + '_' + data['patch_version'] + '_' + patch_description + '.' + f1_ext)
     files1 = open('/home/B180093/anaconda3/envs/telechips/main/static/download/' + sdk_name[:-1] + '_' + data['patch_version'] + '_' + patch_description + '.' + f1_ext, 'rb')
     os.remove(os.path.join('/home/B180093/anaconda3/envs/telechips/main/static/download/', sdk_name[:-1] + '_' + data['patch_version'] + '_' + patch_description + '.' + f1_ext))
     f1.close()
 
     f2 = request.files['releaseNote']
-    f2_ext = f2.filename.split('.')[1]
+    f2_ext = f2.filename.split('.')[-1]
     f2.save('/home/B180093/anaconda3/envs/telechips/main/static/download/' + sdk_name[:-1] + '_' + data['patch_version'] + '_' + patch_description + '.' + f2_ext)
     files2 = open('/home/B180093/anaconda3/envs/telechips/main/static/download/' + sdk_name[:-1] + '_' + data['patch_version'] + '_' + patch_description + '.' + f2_ext, 'rb')
     os.remove(os.path.join('/home/B180093/anaconda3/envs/telechips/main/static/download/', sdk_name[:-1] + '_' + data['patch_version'] + '_' + patch_description + '.' + f2_ext))
